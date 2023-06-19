@@ -68,6 +68,9 @@ class _Alphabets_DisplayState extends State<Alphabets_Display> {
           children: [
             SizedBox(height: 30,),
             Container(
+
+            ),
+            Container(
               height: 350,
               width: 350,
 
@@ -77,7 +80,7 @@ class _Alphabets_DisplayState extends State<Alphabets_Display> {
                 image: DecorationImage(image: AssetImage(var_alpha.picture,),fit: BoxFit.fitHeight,)
               ),
 
-              
+
               ) ,
             SizedBox(height: 20,),
             Container(height: 30,width: 350,color: Colors.grey),
