@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Screens/learn/main_Screen.dart';
-import 'Screens/learn/weeks display.dart';
+import 'Screens/learn/Main_Screen_Display.dart';
+import 'Screens/learn/Weeks Display_page.dart';
 
 void main() {
   runApp(Main());
