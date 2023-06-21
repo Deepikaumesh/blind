@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Alphabets_Display_page.dart';
 import 'Colors_ Display_Page.dart';
+import 'Human_Behaviour_Display.dart';
 import 'Numbers_Display_page.dart';
 import 'Months Display_Page.dart';
 import 'Weeks Display_page.dart';
@@ -64,6 +65,12 @@ class _Main_screenState extends State<Main_screen> {
             child:  contas("assets/images/colors.jpg","Colors"),
             onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Colors_Display_Page()));
+            },
+          ),
+          InkWell(
+            child:  contas("assets/images/behaviour.jpg","Behaviours"),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
             },
           ),
         ],
