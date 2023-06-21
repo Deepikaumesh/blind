@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'Alphabets_Display_page.dart';
-import 'Months and weeeks_Display_page.dart';
 import 'Numbers_Display_page.dart';
+import 'months display.dart';
 
 class Main_screen extends StatefulWidget {
   const Main_screen({Key? key}) : super(key: key);
@@ -50,13 +50,19 @@ class _Main_screenState extends State<Main_screen> {
           InkWell(
             child:  contas("assets/images/10452.jpg","Months"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Months_Display()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Months_Display_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/8795.jpg","weeks"),
             onTap: (){
              Navigator.push(context, MaterialPageRoute(builder: (context)=>Weeks_Display_Page()));
+            },
+          ),
+          InkWell(
+            child:  contas("assets/images/colors.jpg","Colors"),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Weeks_Display_Page()));
             },
           ),
         ],

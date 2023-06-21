@@ -1,19 +1,18 @@
-import 'package:deaf_dump/main.dart';
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-import 'package:animated_text_kit/animated_text_kit.dart';
 
-class Weeks_Display_Page extends StatefulWidget {
-  Weeks_Display_Page() : super();
 
-  final String title = "Video Demo";
+class Months_Display_Page extends StatefulWidget {
+  Months_Display_Page() : super();
+
 
   @override
-  Weeks_Display_PageState createState() => Weeks_Display_PageState();
+  Months_Display_PageState createState() => Months_Display_PageState();
 }
 
-class Weeks_Display_PageState extends State<Weeks_Display_Page> {
+class Months_Display_PageState extends State<Months_Display_Page> {
   //
   late VideoPlayerController _controller;
   late Future<void> _initializeVideoPlayerFuture;
@@ -21,7 +20,7 @@ class Weeks_Display_PageState extends State<Weeks_Display_Page> {
   @override
   void initState() {
     //_controller = VideoPlayerController.network("https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4");
-    _controller = VideoPlayerController.asset("assets/days.mp4");
+    _controller = VideoPlayerController.asset("assets/months.mp4");
     _initializeVideoPlayerFuture = _controller.initialize();
     _controller.setLooping(true);
     _controller.setVolume(1.0);
@@ -41,7 +40,7 @@ class Weeks_Display_PageState extends State<Weeks_Display_Page> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
-          "Days in a Week",
+          "Months of year",
           style: TextStyle(
             color: Colors.red.shade900,
             fontSize: 32,
@@ -94,14 +93,14 @@ class Weeks_Display_PageState extends State<Weeks_Display_Page> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    "SUNDAY",
+                    "JANUARY",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                         color: Colors.orange),
                   ),
                   Text(
-                    "MONDAY",
+                    "FEBRUARY",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
@@ -122,18 +121,56 @@ class Weeks_Display_PageState extends State<Weeks_Display_Page> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "TUESDAY",
+                    "MARCH",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                         color: Colors.red.shade600),
                   ),
                   Text(
-                    "WEDNESDAY",
+                    "APRIL",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
                         color: Colors.blue.shade600),
+                  ),
+                  Text(
+                    "MAY",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.purple),
+                  ),
+
+
+                ],
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "JUNE",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.brown.shade600),
+                  ),
+                  Text(
+                    "JULY",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.green.shade600),
+                  ),
+                  Text(
+                    "AUGUEST",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.purpleAccent),
                   ),
 
                   // Text("TUESDAY"),
@@ -147,40 +184,48 @@ class Weeks_Display_PageState extends State<Weeks_Display_Page> {
                 height: 30,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "THURSDAY",
+                    "SEPTEMBER",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
-                        color: Colors.brown.shade600),
+                        color: Colors.grey.shade600),
                   ),
                   Text(
-                    "FRIDAY",
+                    "OCTOBER",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 30,
-                        color: Colors.green.shade600),
+                        color: Colors.red),
                   ),
 
-                  // Text("TUESDAY"),
-                  // Text("WEDNESDAY"),
-                  // Text("THURSDAY"),
-                  // Text("FRIDAY"),
-                  // Text("SATARDAY"),
                 ],
               ),
-              SizedBox(
-                height: 30,
+              SizedBox(height: 30,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    "NOVEMBER",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.black),
+                  ),
+                  Text(
+                    "DECEMBER",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30,
+                        color: Colors.teal),
+                  ),
+
+                ],
               ),
-              Text(
-                "SATURDAY",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    color: Colors.grey.shade600),
-              ),
+
+
             ],
           ),
           SizedBox(
@@ -213,131 +258,12 @@ class Weeks_Display_PageState extends State<Weeks_Display_Page> {
             ),
           ),
 
-          Container(
-            //   color: Colors.yellow,
-            height: 100,
-            width: 200,
-            child: AnimatedTextKit(
-              animatedTexts: [
-                RotateAnimatedText('Monday',
-                    textStyle: TextStyle(
-                      fontSize: 30,
-                      color: Colors.red.shade900,
-                      //backgroundColor: Colors.blue
-                    )),
-                RotateAnimatedText('Tuesday',
-                    textStyle: TextStyle(
-                        letterSpacing: 3,
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.orange)),
-                RotateAnimatedText(
-                  'Wednesday',
-                  textStyle: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.brown,
-                  ),
-                ),
-                RotateAnimatedText(
-                  'Thursday',
-                  textStyle: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.purple,
-                  ),
-                ),
-                RotateAnimatedText(
-                  'Friday',
-                  textStyle: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue,
-                  ),
-                ),
-                RotateAnimatedText(
-                  'Saturday',
-                  textStyle: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red,
-                  ),
-                ),
-              ],
-              isRepeatingAnimation: true,
-              totalRepeatCount: 10,
-              pause: Duration(milliseconds: 1000),
-            ),
-          ),
 
-          // Center(
-          //   child: AnimatedTextKit(
-          //     totalRepeatCount: 40,
-          //     animatedTexts: [
-          //       FadeAnimatedText(
-          //         'Sunday',
-          //         textStyle: const TextStyle(
-          //             color: Colors.orange,
-          //             fontSize: 32.0,
-          //             fontWeight: FontWeight.bold),
-          //       ),
-          //       ScaleAnimatedText(
-          //         'Monday',
-          //         duration: Duration(milliseconds: 4000),
-          //         textStyle:
-          //         const TextStyle(color: Colors.yellow, fontSize: 50.0),
-          //       ),
-          //       FadeAnimatedText(
-          //         'Tuesday',
-          //         textStyle: const TextStyle(
-          //             color: Colors.red,
-          //             fontSize: 32.0,
-          //             fontWeight: FontWeight.bold),
-          //       ),
-          //       ScaleAnimatedText(
-          //         'Wednesday',
-          //         duration: Duration(milliseconds: 4000),
-          //         textStyle:
-          //         const TextStyle(color: Colors.blue, fontSize: 50.0),
-          //       ),
-          //       FadeAnimatedText(
-          //         'Thursday',
-          //         textStyle: const TextStyle(
-          //             color: Colors.brown,
-          //             fontSize: 32.0,
-          //             fontWeight: FontWeight.bold),
-          //       ),
-          //       ScaleAnimatedText(
-          //         'friday',
-          //         duration: Duration(milliseconds: 4000),
-          //         textStyle:
-          //         const TextStyle(color: Colors.green, fontSize: 50.0),
-          //       ),
-          //       FadeAnimatedText(
-          //         'Saturday',
-          //         textStyle: const TextStyle(
-          //             color: Colors.grey,
-          //             fontSize: 32.0,
-          //             fontWeight: FontWeight.bold),
-          //       ),
-          //     ],
-          //   ),
-          // ),
+
+
+
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {
-      //     setState(() {
-      //       if (_controller.value.isPlaying) {
-      //         _controller.pause();
-      //       } else {
-      //         _controller.play();
-      //       }
-      //     });
-      //   },
-      //   child:
-      //   Icon(_controller.value.isPlaying ? Icons.pause : Icons.play_arrow),
-      // ),
-    );
+         );
   }
 }
