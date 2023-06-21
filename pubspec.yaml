@@ -38,6 +38,7 @@ dependencies:
   video_player: ^2.6.1
   animated_text_kit: ^4.2.2
   fluttertoast:
+  google_fonts:
 
 
 dev_dependencies:
@@ -68,7 +69,12 @@ flutter:
     - assets/days.mp4
     - assets/months.mp4
     - assets/colors.mp4
-    - assets/baha2.jpg
+    - assets/family.png
+    - assets/Family.mp4
+    - assets/Mother.mp4
+    - assets/Grandpa.mp4
+
+
 
 
 

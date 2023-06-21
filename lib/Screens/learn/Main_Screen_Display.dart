@@ -73,6 +73,13 @@ class _Main_screenState extends State<Main_screen> {
               Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
             },
           ),
+
+          InkWell(
+            child:  contas("assets/family.png","Family"),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
+            },
+          ),
         ],
       ),
     );

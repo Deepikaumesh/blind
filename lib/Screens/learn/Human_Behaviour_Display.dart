@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Human_Behaviour_Display extends StatefulWidget {
   Human_Behaviour_Display() : super();
@@ -32,54 +33,185 @@ class Human_Behaviour_DisplayState extends State<Human_Behaviour_Display> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-
-
-        Container(
-          height: 300,
-        //  height:MediaQuery.of(context).size.height,
-          decoration: BoxDecoration(
-           // border: Border.all(width: 2, color: Colors.black26),
-            borderRadius: BorderRadius.all(
-              Radius.circular(10.0),
-            ),
-            image: DecorationImage(
-              image:  AssetImage("assets/images/expression.jpeg"),
-              fit: BoxFit.contain,
-            )
-          ),
-          // child: Column(
-          //   children: [
-          //     SizedBox(
-          //       height: 5,
-          //     ),
-          //     SizedBox(height: 150, child: Image(image: AssetImage("assets/images/expression.jpeg"))),
-          //   ],
-          // ),
-        ),
             Container(
               height: 300,
               //  height:MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                //  border: Border.all(width: 2, color: Colors.black26),
+                  // border: Border.all(width: 2, color: Colors.black26),
                   borderRadius: BorderRadius.all(
                     Radius.circular(10.0),
                   ),
                   image: DecorationImage(
-                    image:  AssetImage("assets/images/baha2.jpg"),
+                    image: AssetImage("assets/images/expression.jpeg"),
                     fit: BoxFit.contain,
-                  )
-              ),
-              // child: Column(
-              //   children: [
-              //     SizedBox(
-              //       height: 5,
-              //     ),
-              //     SizedBox(height: 150, child: Image(image: AssetImage("assets/images/expression.jpeg"))),
-              //   ],
-              // ),
+                  )),
             ),
-
-  ],),
-      ),    );
+            Container(
+              height: 300,
+              //  height:MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                  //  border: Border.all(width: 2, color: Colors.black26),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10.0),
+                  ),
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/baha2.jpg"),
+                    fit: BoxFit.contain,
+                  )),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Hello",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+                Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Goodbye",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+                Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "No",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Please",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Thank you",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+                Container(
+                  height: 50,
+                  width: 90,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Yes",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  height: 50,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Sorry",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+                Container(
+                  height: 50,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: Colors.pink.shade100,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10.0),
+                    ),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "I love you",
+                    style:
+                        GoogleFonts.prompt(fontSize: 20, color: Colors.white),
+                  )),
+                ),
+              ],
+            ),
+            Container(height: 20,),
+          ],
+        ),
+      ),
+    );
   }
 }
