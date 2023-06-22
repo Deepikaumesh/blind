@@ -1,12 +1,13 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Alphabets_Display_page.dart';
-import 'Colors_ Display_Page.dart';
-import 'Human_Behaviour_Display.dart';
-import 'Numbers_Display_page.dart';
-import 'Months Display_Page.dart';
-import 'Weeks Display_page.dart';
+import 'Alphabets/Alphabets_Display_page.dart';
+import 'Colors/Colors_ Display_Page.dart';
+import 'Family/Family_Display_Page.dart';
+import 'Behaviours/Human_Behaviour_Display.dart';
+import 'Numbers/Numbers_Display_page.dart';
+import 'Months/Months Display_Page.dart';
+import 'Weeks/Weeks Display_page.dart';
 
 class Main_screen extends StatefulWidget {
   const Main_screen({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _Main_screenState extends State<Main_screen> {
         centerTitle: true,
         title: const Text(
           'Deaf  & dump Learning',
-          style: TextStyle(fontSize: 20, color: Colors.teal),
+          style: TextStyle(fontSize: 25, color: Colors.teal),
         ),
       ),
       body: GridView(
@@ -77,7 +78,7 @@ class _Main_screenState extends State<Main_screen> {
           InkWell(
             child:  contas("assets/family.png","Family"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Family_Display_Page()));
             },
           ),
         ],

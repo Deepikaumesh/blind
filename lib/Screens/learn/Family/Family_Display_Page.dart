@@ -1,13 +1,9 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'Alphabets_Display_page.dart';
-import 'Colors_ Display_Page.dart';
-import 'Human_Behaviour_Display.dart';
-import 'Numbers_Display_page.dart';
-import 'Months Display_Page.dart';
-import 'Weeks Display_page.dart';
 
+import 'Family_Detail_Display_Page.dart';
+import 'Father_Display_Page.dart';
 class Family_Display_Page extends StatefulWidget {
   const Family_Display_Page({Key? key}) : super(key: key);
 
@@ -24,9 +20,9 @@ class _Family_Display_PageState extends State<Family_Display_Page> {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Family',
-          style: TextStyle(fontSize: 20, color: Colors.teal),
+          style: TextStyle(fontSize: 25, color:Colors.pink.shade300),
         ),
       ),
       body: GridView(
@@ -38,48 +34,49 @@ class _Family_Display_PageState extends State<Family_Display_Page> {
             mainAxisSpacing: 40),
         children: [
           InkWell(
-            child:  contas("assets/images/a.jpg","Alphabets"),
+            child:  contas("assets/family.png","Family"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Alphabets_Display()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Family_Detail_Display_Page()));
             },
           ),
           InkWell(
-            child:  contas("assets/images/294497-P78TN6-555.jpg","Numbers"),
+            child:  contas("assets/images/father.png","Father"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Numbers_Display()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Father_Display_Page()));
             },
           ),
           InkWell(
-            child:  contas("assets/images/10452.jpg","Months"),
+            child:  contas("assets/images/mother.png","Mother"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Months_Display_Page()));
+            //  Navigator.push(context, MaterialPageRoute(builder: (context)=>Numbers_Display()));
             },
           ),
           InkWell(
-            child:  contas("assets/images/8795.jpg","weeks"),
+            child:  contas("assets/images/grandfather.png","Grand Father"),
             onTap: (){
-             Navigator.push(context, MaterialPageRoute(builder: (context)=>Weeks_Display_Page()));
+          //    Navigator.push(context, MaterialPageRoute(builder: (context)=>Months_Display_Page()));
             },
           ),
           InkWell(
-            child:  contas("assets/images/colors.jpg","Colors"),
+            child:  contas("assets/images/grandmother.png","Grand Mother"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Colors_Display_Page()));
+            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Weeks_Display_Page()));
             },
           ),
           InkWell(
-            child:  contas("assets/images/behaviour.jpg","Behaviours"),
+            child:  contas("assets/images/brother.png","Brother"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
+            //  Navigator.push(context, MaterialPageRoute(builder: (context)=>Colors_Display_Page()));
+            },
+          ),
+          InkWell(
+            child:  contas("assets/images/sister.png","Sister"),
+            onTap: (){
+              //Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
             },
           ),
 
-          InkWell(
-            child:  contas("assets/family.png","Family"),
-            onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
-            },
-          ),
+
         ],
       ),
     );
@@ -105,7 +102,7 @@ class _Family_Display_PageState extends State<Family_Display_Page> {
     return Container(
       height: 230,
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: Colors.black26),
+        border: Border.all(width: 2, color: Colors.pink.shade300),
         borderRadius: BorderRadius.all(
           Radius.circular(10.0),
         ),
@@ -119,7 +116,7 @@ class _Family_Display_PageState extends State<Family_Display_Page> {
             title,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.red.shade900,
+                color: Colors.teal.shade600,
                 fontSize: 20),
           ),
           SizedBox(height: 150, child: Image(image: AssetImage(url))),

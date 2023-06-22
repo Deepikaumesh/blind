@@ -39,6 +39,7 @@ dependencies:
   animated_text_kit: ^4.2.2
   fluttertoast:
   google_fonts:
+  chewie:
 
 
 dev_dependencies:
@@ -73,6 +74,21 @@ flutter:
     - assets/Family.mp4
     - assets/Mother.mp4
     - assets/Grandpa.mp4
+    - assets/father.png
+    - assets/mother.png
+    - assets/learn.jpg
+    - assets/grandfather.png
+    - assets/grandmother.png
+    - assets/sister.png
+    - assets/brother.png
+   # - assets/Father.mp4
+    - assets/Grandpa.mp4
+    - assets/learn1.jpg
+    - assets/games.jpg
+
+  #  - assets/grandma.mp4
+
+
 
 
 
