@@ -42,6 +42,20 @@ dependencies:
   chewie:
 
 
+    # pick video from file system
+  file_picker:
+
+    # prevent screen from sleeping
+  wakelock:
+
+    # switch orientation
+  auto_orientation:
+
+    # listen to orientation
+  native_device_orientation:
+  flick_video_player:
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -85,6 +99,12 @@ flutter:
     - assets/Grandpa.mp4
     - assets/learn1.jpg
     - assets/games.jpg
+    - assets/Father.mp4
+    - assets/Grandmother.mp4
+    - assets/Brother.mp4
+    - assets/sister.mp4
+    - assets/baby.mp4
+    - assets/baby.png
 
   #  - assets/grandma.mp4
 

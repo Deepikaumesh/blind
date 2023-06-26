@@ -2,8 +2,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Family_Detail_Display_Page.dart';
-import 'Father_Display_Page.dart';
+
+
+import 'Baby_Detail_Page.dart';
+import 'Brother_Detail_Page.dart';
+import 'Family_Detail_Page.dart';
+import 'Father_Detail_Page.dart';
+import 'GrandFather_Detail_Page.dart';
+import 'GrandMother_Detail_Page.dart';
+import 'Mother_Detail_Page.dart';
+import 'Sister_Detail_Page.dart';
+
 class Family_Display_Page extends StatefulWidget {
   const Family_Display_Page({Key? key}) : super(key: key);
 
@@ -36,43 +45,49 @@ class _Family_Display_PageState extends State<Family_Display_Page> {
           InkWell(
             child:  contas("assets/family.png","Family"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Family_Detail_Display_Page()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Family_Detail_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/father.png","Father"),
             onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Father_Display_Page()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Father_Detail_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/mother.png","Mother"),
             onTap: (){
-            //  Navigator.push(context, MaterialPageRoute(builder: (context)=>Numbers_Display()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Mother_Detail_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/grandfather.png","Grand Father"),
             onTap: (){
-          //    Navigator.push(context, MaterialPageRoute(builder: (context)=>Months_Display_Page()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>GrandFather_Detail_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/grandmother.png","Grand Mother"),
             onTap: (){
-            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Weeks_Display_Page()));
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>GrandMother_Detail_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/brother.png","Brother"),
             onTap: (){
-            //  Navigator.push(context, MaterialPageRoute(builder: (context)=>Colors_Display_Page()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Brother_Detail_Page()));
             },
           ),
           InkWell(
             child:  contas("assets/images/sister.png","Sister"),
             onTap: (){
-              //Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Sister_Detail_Page()));
+            },
+          ),
+          InkWell(
+            child:  contas("assets/baby.png","Baby"),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Baby_Detail_Page()));
             },
           ),
 

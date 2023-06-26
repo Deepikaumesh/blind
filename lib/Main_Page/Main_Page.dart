@@ -82,7 +82,7 @@ class _Main_PageState extends State<Main_Page> {
                           child: Text(
                             "Games",
                             style: GoogleFonts.courgette(
-                                fontSize: 40, color: Colors.blueGrey.shade900),
+                                fontSize: 40, color: Colors.deepOrange.shade500),
                           )),
                     ],
                   ),
@@ -113,7 +113,7 @@ class _Main_PageState extends State<Main_Page> {
                           top: 15,
                           left: 30,
                           child: Text(
-                            "Learn",
+                            "Resources",
                             style: GoogleFonts.courgette(
                                 fontSize: 40, color: Colors.blueGrey.shade900),
                           )),
