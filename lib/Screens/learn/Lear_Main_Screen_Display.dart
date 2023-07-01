@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import 'Alphabets/Alphabets_Display_page.dart';
 import 'Colors/Colors_ Display_Page.dart';
 import 'Family/Family_Display_Page.dart';
-import 'Behaviours/Human_Behaviour_Display.dart';
+import 'Greetings/Greetings_Display.dart';
 import 'Numbers/Numbers_Display_page.dart';
 import 'Months/Months Display_Page.dart';
 import 'Weeks/Weeks Display_page.dart';
 
-class Main_screen extends StatefulWidget {
-  const Main_screen({Key? key}) : super(key: key);
+class Learn_Main_screen extends StatefulWidget {
+  const Learn_Main_screen({Key? key}) : super(key: key);
 
   @override
-  _Main_screenState createState() => _Main_screenState();
+  _Learn_Main_screenState createState() => _Learn_Main_screenState();
 }
 
-class _Main_screenState extends State<Main_screen> {
+class _Learn_Main_screenState extends State<Learn_Main_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,9 +69,9 @@ class _Main_screenState extends State<Main_screen> {
             },
           ),
           InkWell(
-            child:  contas("assets/images/behaviour.jpg","Behaviours"),
+            child:  contas("assets/images/behaviour.jpg","Greetings"),
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>Human_Behaviour_Display()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Greetings_Display()));
             },
           ),
 

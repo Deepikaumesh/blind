@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Human_Behaviour_Display extends StatefulWidget {
-  Human_Behaviour_Display() : super();
+class Greetings_Display extends StatefulWidget {
+  Greetings_Display() : super();
 
   @override
-  Human_Behaviour_DisplayState createState() => Human_Behaviour_DisplayState();
+  Greetings_DisplayState createState() => Greetings_DisplayState();
 }
 
-class Human_Behaviour_DisplayState extends State<Human_Behaviour_Display> {
+class Greetings_DisplayState extends State<Greetings_Display> {
   //
 
   @override
@@ -19,7 +19,7 @@ class Human_Behaviour_DisplayState extends State<Human_Behaviour_Display> {
         automaticallyImplyLeading: false,
         centerTitle: true,
         title: Text(
-          "Human Behaviours",
+          "Greetings",
           style: TextStyle(
             color: Colors.red.shade900,
             fontSize: 32,

@@ -3,58 +3,59 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../Screens/Games/Games_main_Page.dart';
+import 'demo.dart';
 
 
-class Main_Page extends StatefulWidget {
-  const Main_Page({Key? key}) : super(key: key);
+class Games_Main_Page extends StatefulWidget {
+  const Games_Main_Page({Key? key}) : super(key: key);
 
   @override
-  _Main_PageState createState() => _Main_PageState();
+  _Games_Main_PageState createState() => _Games_Main_PageState();
 }
 
-class _Main_PageState extends State<Main_Page> {
+class _Games_Main_PageState extends State<Games_Main_Page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey.shade100,
+      backgroundColor: Colors.black,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 90,
 
         elevation: 0,backgroundColor: Colors.transparent,
-      title: Text("Choose a card to get statred....",style: GoogleFonts.cookie(
+      title: Text("Choose a Topic to be\ntested on...",style: GoogleFonts.average(
 
 
-          color: Colors.grey.shade600,fontSize: 40),),),
+          color: Colors.white,fontSize: 35),),),
       body: SingleChildScrollView(
         child: Column(
              mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             InkWell(
                 onTap: () {
-                 // Navigator.push(context, MaterialPageRoute(builder: (context) => Learn_Main_screen()));
-                  Navigator.pushNamed(context, '/Learn_Main_screen');
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DemoApp()));
                 },
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                   child: Card(
                     // semanticContainer: true,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Stack(
                       children: [
                         Image.asset(
-                          'assets/learn1.jpg',
-                          height: 220,
+                          'assets/alphabets2.jpg',
+                        //  height: 170,
                           width: MediaQuery.of(context).size.width,
                           fit: BoxFit.contain,
                         ),
                         Positioned(
-                            top: 15,
-                            left: 30,
+                            top: 80,
+                            left: 80,
                             child: Text(
-                              "Learn",
+                              "Alphabets",
                               style: GoogleFonts.courgette(
-                                  fontSize: 40, color: Colors.blueGrey.shade900),
+                                  fontSize: 40, color: Colors.black),
                             )),
                       ],
                     ),
@@ -68,18 +69,18 @@ class _Main_PageState extends State<Main_Page> {
                 )),
             InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Games_Main_Page()));
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: (context) => kids_learning_1()));
                 },
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Card(
                     // semanticContainer: true,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Stack(
                       children: [
                         Image.asset(
-                          'assets/games.jpg',
+                          'assets/greetings.jpg',
                           height: 220,
                           width: MediaQuery.of(context).size.width,
                           fit: BoxFit.contain,
@@ -88,9 +89,9 @@ class _Main_PageState extends State<Main_Page> {
                             top: 15,
                             left: 30,
                             child: Text(
-                              "Games",
+                              "Greetings",
                               style: GoogleFonts.courgette(
-                                  fontSize: 40, color: Colors.deepOrange.shade500),
+                                  fontSize: 40, color: Colors.teal.shade400),
                             )),
                       ],
                     ),
@@ -108,7 +109,7 @@ class _Main_PageState extends State<Main_Page> {
                   //     MaterialPageRoute(builder: (context) => Main_screen()));
                 },
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                   child: Card(
                     // semanticContainer: true,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -124,7 +125,7 @@ class _Main_PageState extends State<Main_Page> {
                             top: 15,
                             left: 30,
                             child: Text(
-                              "Resources",
+                              "Challenge",
                               style: GoogleFonts.courgette(
                                   fontSize: 40, color: Colors.blueGrey.shade900),
                             )),

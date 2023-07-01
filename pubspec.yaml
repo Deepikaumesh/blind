@@ -40,6 +40,8 @@ dependencies:
   fluttertoast:
   google_fonts:
   chewie:
+  quiz_view:
+  rflutter_alert:
 
 
     # pick video from file system
@@ -105,6 +107,13 @@ flutter:
     - assets/sister.mp4
     - assets/baby.mp4
     - assets/baby.png
+    - assets/alphabets2.jpg
+    - assets/greetings.jpg
+    - assets/letter-f.png
+    - assets/letter-j.png
+    - assets/letter-x.png
+    - assets/letter-y.png
+
 
   #  - assets/grandma.mp4
 
