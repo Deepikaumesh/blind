@@ -83,6 +83,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/greetings/
     - assets/days.mp4
     - assets/months.mp4
     - assets/colors.mp4
@@ -113,6 +114,7 @@ flutter:
     - assets/letter-j.png
     - assets/letter-x.png
     - assets/letter-y.png
+    - assets/letter-c.png
 
 
   #  - assets/grandma.mp4

@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'demo.dart';
+import 'Alphabet_game.dart';
+import 'Greetings_game.dart';
 
 
 class Games_Main_Page extends StatefulWidget {
@@ -34,7 +35,7 @@ class _Games_Main_PageState extends State<Games_Main_Page> {
             InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => DemoApp()));
+                      MaterialPageRoute(builder: (context) => Alphabet_Game()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
@@ -69,8 +70,8 @@ class _Games_Main_PageState extends State<Games_Main_Page> {
                 )),
             InkWell(
                 onTap: () {
-                  // Navigator.push(context,
-                  //     MaterialPageRoute(builder: (context) => kids_learning_1()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Greetings_Game()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),

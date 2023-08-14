@@ -4,14 +4,14 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 
 
 
-class DemoApp extends StatefulWidget {
+class Alphabet_Game extends StatefulWidget {
 
 
   @override
-  _DemoAppState createState() => _DemoAppState();
+  _Alphabet_GameState createState() => _Alphabet_GameState();
 }
 
-class _DemoAppState extends State<DemoApp> {
+class _Alphabet_GameState extends State<Alphabet_Game> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

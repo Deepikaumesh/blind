@@ -86,21 +86,21 @@ class _Learn_Main_screenState extends State<Learn_Main_screen> {
     );
   }
 
-  conta(String url) {
-    return Container(
-      height: 200,
-      decoration: BoxDecoration(
-        border: Border.all(width: 2, color: Colors.black26),
-        image: DecorationImage(
-          image: AssetImage(url),
-          fit: BoxFit.contain,
-        ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(20.0),
-        ),
-      ),
-    );
-  }
+  // conta(String url) {
+  //   return Container(
+  //     height: 200,
+  //     decoration: BoxDecoration(
+  //       border: Border.all(width: 2, color: Colors.black26),
+  //       image: DecorationImage(
+  //         image: AssetImage(url),
+  //         fit: BoxFit.contain,
+  //       ),
+  //       borderRadius: BorderRadius.all(
+  //         Radius.circular(20.0),
+  //       ),
+  //     ),
+  //   );
+  // }
 
   contas(String url,String title) {
     return Container(
