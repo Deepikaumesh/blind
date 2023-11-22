@@ -48,21 +48,21 @@ class _Family_Detail_PageState extends State<Family_Detail_Page> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              contas("assets/father.png", "Father"),
-              contas("assets/images/mother.png", "Mother"),
+              Custom_Container("assets/father.png", "Father"),
+              Custom_Container("assets/images/mother.png", "Mother"),
             ],
           ),Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              contas("assets/grandfather.png", "Grand Father"),
-              contas("assets/images/grandmother.png", "Grand Mother"),
+              Custom_Container("assets/grandfather.png", "Grand Father"),
+              Custom_Container("assets/images/grandmother.png", "Grand Mother"),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              contas("assets/brother.png", "Brother"),
-              contas("assets/images/sister.png", "Sister"),
+              Custom_Container("assets/brother.png", "Brother"),
+              Custom_Container("assets/images/sister.png", "Sister"),
             ],
           ),
 
@@ -71,7 +71,7 @@ class _Family_Detail_PageState extends State<Family_Detail_Page> {
     );
   }
 
-  contas(String url, String title) {
+  Custom_Container(String url, String title) {
     return Container(
       height: 150,
       decoration: BoxDecoration(
