@@ -73,9 +73,11 @@ class _Display_DataState extends State<Display_Data> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.teal.shade200,
+          automaticallyImplyLeading: false,
           centerTitle: true,
           title: Text(
-            "Display Data",
+            "Contacts",
           ),
         ),
         body: Form(

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'Add_contacts.dart';
+import 'Conversion.dart';
 
 
 
@@ -117,7 +118,7 @@ class _Resources_Main_PageState extends State<Resources_Main_Page> {
                 )),
             InkWell(
                 onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => Learn_Main_screen()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Conversion()));
 
                 },
                 child: Padding(
@@ -317,13 +318,13 @@ class _Resources_Main_PageState extends State<Resources_Main_Page> {
                   ),
                 )),
 
-    Center(
-    child: TextButton(
-    onPressed: () {
-      launch("tel://9526843393");
-    },
-    child: Text("Call me")),
-    ),
+    // Center(
+    // child: TextButton(
+    // onPressed: () {
+    //   launch("tel://9526843393");
+    // },
+    // child: Text("Call me")),
+    // ),
 
 
 

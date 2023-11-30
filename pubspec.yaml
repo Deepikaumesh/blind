@@ -43,6 +43,7 @@ dependencies:
   quiz_view:
   rflutter_alert:
   url_launcher:
+  flutter_tts:
 
 
     # pick video from file system
@@ -116,6 +117,7 @@ flutter:
     - assets/letter-x.png
     - assets/letter-y.png
     - assets/letter-c.png
+    - assets/conversion.jpg
 
 
   #  - assets/grandma.mp4
