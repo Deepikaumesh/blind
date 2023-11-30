@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'Main_Page/Main_Page.dart';
 import 'Screens/learn/Lear_Main_Screen_Display.dart';
 
+var ip_address='192.168.29.64';
+
 
 void main() {
   runApp(Main());

@@ -42,6 +42,7 @@ dependencies:
   chewie:
   quiz_view:
   rflutter_alert:
+  url_launcher:
 
 
     # pick video from file system
