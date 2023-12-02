@@ -1,9 +1,11 @@
+import 'package:deaf_dump/Screens/Resources/sos_message.dart';
 import 'package:deaf_dump/Screens/learn/Lear_Main_Screen_Display.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../main.dart';
 import 'Add_contacts.dart';
 import 'Conversion.dart';
 
@@ -19,6 +21,19 @@ class Resources_Main_Page extends StatefulWidget {
 }
 
 class _Resources_Main_PageState extends State<Resources_Main_Page> {
+
+
+  @override
+  void initState() {
+
+    emergency == null? emergency = '100': emergency= emergency;
+
+    super.initState();
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -238,6 +253,15 @@ class _Resources_Main_PageState extends State<Resources_Main_Page> {
                 )),
             InkWell(
                 onTap: () {
+                  setState(() {
+                   // launch("tel://9526843393");
+                   launch("tel://${emergency}");
+                   // emergency == null ? launch("tel://100"):  launch("tel://${emergency}");
+                   //  emergency == null? emergency = '100' :
+                   //      emergency == null ? launch("tel://${emergency}"):
+                   //      launch("tel://${emergency}");
+
+                  });
                   // Navigator.push(context, MaterialPageRoute(builder: (context) => Learn_Main_screen()));
 
                 },
@@ -279,7 +303,8 @@ class _Resources_Main_PageState extends State<Resources_Main_Page> {
 
             InkWell(
                 onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => Learn_Main_screen()));
+
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Sos_Message()));
 
                 },
                 child: Padding(

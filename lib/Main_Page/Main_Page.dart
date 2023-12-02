@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../About_Us.dart';
 import '../Screens/Games/Games_main_Page.dart';
 import '../Screens/Resources/Resources_Main_Page.dart';
 
@@ -62,11 +63,11 @@ class _Main_PageState extends State<Main_Page> {
               leading: Icon(Icons.menu_book_outlined),
               title: Text('About Us'),
               onTap: () {
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => About_Us(
-                //         )));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => About_Us(
+                        )));
               },
             ),
 

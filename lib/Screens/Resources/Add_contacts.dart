@@ -170,15 +170,19 @@ class _Display_DataState extends State<Display_Data> {
                   ),
                 ),
               ),
-              SizedBox(height: 30,),
-              Divider(color: Colors.grey.shade900,),
-
-              SizedBox(height: 30,),
-
-              Text("Existing Contacts",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-
-
-
+              SizedBox(
+                height: 30,
+              ),
+              Divider(
+                color: Colors.grey.shade900,
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                "Existing Contacts",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+              ),
               Flexible(
                 child: Container(
                   padding: EdgeInsets.all(16.0),
@@ -217,10 +221,13 @@ class _Display_DataState extends State<Display_Data> {
                                   child: Column(
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsets.all(1.0),
+                                        padding: const EdgeInsets.all(5.0),
                                         child: ListTile(
+                                          contentPadding: EdgeInsets.all(5),
                                           title: Text(
-                                            snapshot.data[index].name,style: TextStyle(fontWeight: FontWeight.bold),
+                                            snapshot.data[index].name,
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold),
                                           ),
                                           leading: GestureDetector(
                                               onTap: () {},
@@ -228,16 +235,74 @@ class _Display_DataState extends State<Display_Data> {
                                                 Icons.contact_phone,
                                                 color: Colors.green.shade900,
                                               )),
-                                          subtitle: Text(
-                                            snapshot.data[index].phone,style: TextStyle(fontWeight: FontWeight.bold),
+                                          subtitle: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                snapshot.data[index].phone,
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
+                                              GestureDetector(
+                                                onTap: (){
+
+                                                  emergency = snapshot.data[index].phone;
+                                                  emergency_id = snapshot.data[index].id;
+                                                  print("${emergency}");
+                                                  print("${emergency_id}");
+                                                  setState(() {
+                                                    Emergency_No();
+                                                  });
+
+                                                  // final snackBar = SnackBar(
+                                                  //   content: Text('No Added as Emergency'),
+                                                  //   action: SnackBarAction(
+                                                  //     label: 'Ok',
+                                                  //     onPressed: () {
+                                                  //       // Some code to undo the change.
+                                                  //     },
+                                                  //   ),
+                                                  // );
+                                                  //
+                                                  // ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                                },
+                                                child: Container(
+                                                    height: 20,
+                                                    width: 140,
+                                                    color: Colors.white,
+                                                    child: Center(
+                                                      child: Text(
+                                                        "Set No as Emergency",
+                                                        style: TextStyle(
+                                                          color: Colors.red,
+                                                          decoration:
+                                                              TextDecoration
+                                                                  .underline,
+                                                          decorationColor:
+                                                              Colors.blue,
+                                                          decorationThickness: 3,
+                                                          decorationStyle:
+                                                              TextDecorationStyle
+                                                                  .solid,
+                                                        ),
+                                                      ),
+                                                    )),
+                                              ),
+                                            ],
                                           ),
                                           trailing: GestureDetector(
                                               onTap: () {
-                                                launch("tel://"+snapshot.data[index].phone);
+                                                launch("tel://" +
+                                                    snapshot.data[index].phone);
                                               },
                                               child: Icon(
                                                 Icons.call,
-                                                color: Colors.red.shade900,
+                                                color: Colors.teal,
                                               )),
                                         ),
                                       ),
@@ -297,5 +362,44 @@ class _Display_DataState extends State<Display_Data> {
           timeInSecForIosWeb: 1,
           backgroundColor: Colors.blueGrey);
     }
+  }
+
+  Emergency_No() async {
+    final response = await http.post(
+        Uri.parse("http://$ip_address/Dumb_Deaf/add_emergency_no.php"),
+        body: {
+         // "id":emergency_id,
+          "phone": emergency,
+
+        });
+    if (response.statusCode == 200) {
+
+
+      final snackBar = await SnackBar(
+        content: const Text('Emergency No Added!'),
+        action: SnackBarAction(
+          label: 'Ok',
+          onPressed: () {
+            //Navigator.pop(context);
+            // Some code to undo the change.
+          },
+        ),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    } else {
+      print("not");
+      final snackBar = await SnackBar(
+        content: const Text('Event updation failed!'),
+        action: SnackBarAction(
+          label: 'Ok',
+          onPressed: () {
+            //Navigator.pop(context);
+            // Some code to undo the change.
+          },
+        ),
+      );
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+    }
+    setState(() {});
   }
 }

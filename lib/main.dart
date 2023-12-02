@@ -4,6 +4,11 @@ import 'Main_Page/Main_Page.dart';
 import 'Screens/learn/Lear_Main_Screen_Display.dart';
 
 var ip_address='192.168.29.64';
+var em='';
+
+var emergency;
+var emergency_id='';
+
 
 
 void main() {

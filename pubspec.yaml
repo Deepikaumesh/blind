@@ -58,6 +58,7 @@ dependencies:
     # listen to orientation
   native_device_orientation:
   flick_video_player:
+  flutter_sms: ^2.3.3
 
 
 dev_dependencies:
