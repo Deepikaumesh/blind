@@ -67,6 +67,7 @@ dependencies:
   collection: ^1.16.0
   mockito: ^5.2.0
   sms_advanced: ^1.1.0
+  shared_preferences: 
 
 
 dev_dependencies:
