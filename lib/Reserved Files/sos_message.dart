@@ -3,43 +3,62 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sms/flutter_sms.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Sos_Message extends StatefulWidget {
-  const Sos_Message({Key? key}) : super(key: key);
 
-  @override
-  _Sos_MessageState createState() => _Sos_MessageState();
-}
+//package :   flutter_sms:
 
-class _Sos_MessageState extends State<Sos_Message> {
-
-  void sending_SMS(String msg, List<String> list_receipents) async {
-    String send_result = await sendSMS(message: msg, recipients: list_receipents)
-        .catchError((err) {
-      print(err);
-    });
-    print(send_result);
-  }
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(child:Column(
-        children: [
-
-          TextButton(onPressed: (){
-            setState(() {
-              sending_SMS('Hello, this the test message', ['9526843393',]);
-            });
-          },child: Text("test"),)
-
-        ],
-      ),),
-
-    );
-  }
-}
+// class Sos_Message extends StatefulWidget {
+//   const Sos_Message({Key? key}) : super(key: key);
+//
+//   @override
+//   _Sos_MessageState createState() => _Sos_MessageState();
+// }
+//
+// class _Sos_MessageState extends State<Sos_Message> {
+//
+//   void sending_SMS(String msg, List<String> list_receipents) async {
+//     String send_result = await sendSMS(message: msg, recipients: list_receipents)
+//         .catchError((err) {
+//       print(err);
+//     });
+//     print(send_result);
+//   }
+//
+// sendsms(){
+//     String sms = "sms:9036126108";
+//     launch(sms);
+//
+// }
+//
+//
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(),
+//       body: Center(child:Column(
+//         children: [
+//
+//           TextButton(onPressed: (){
+//             setState(() {
+//               sending_SMS('Hello, this the test message', ['9526843393',]);
+//             });
+//           },child: Text("test"),),
+//
+//
+//           TextButton(onPressed: (){
+//             setState(() {
+//               sendsms();
+//             });
+//           },child: Text("test2"),),
+//
+//
+//
+//         ],
+//       ),),
+//
+//     );
+//   }
+// }
 //
 // import 'package:flutter/material.dart';
 // // import 'package:flutter/cupertino.dart'; Unused Dependency
@@ -192,3 +211,44 @@ class _Sos_MessageState extends State<Sos_Message> {
 //     )) throw 'Could not launch $url';
 //   }
 // }
+
+
+
+
+
+
+class sos4 extends StatefulWidget{
+  @override
+  _sos4State createState() => _sos4State();
+}
+
+class _sos4State extends State<sos4> {
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+        appBar: AppBar(
+          title: Text("Open SMS App"),
+          backgroundColor: Colors.redAccent,
+        ),
+        body: Container(
+            padding: EdgeInsets.only(top:20, left:20, right:20),
+            alignment: Alignment.topCenter,
+            child: Column(
+              children: [
+                ElevatedButton(
+                    onPressed: ()async{
+                      Uri sms = Uri.parse('sms:101022?body=i am trapped please help');
+                      if (await launchUrl(sms)) {
+                        //app opened
+                      }else{
+                        //app is not opened
+                      }
+                    },
+                    child: Text("Send Us SMS")
+                )
+              ],)
+        )
+    );
+  }
+}

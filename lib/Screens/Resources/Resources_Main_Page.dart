@@ -1,13 +1,16 @@
-import 'package:deaf_dump/Screens/Resources/sos_message.dart';
+import 'package:deaf_dump/Reserved%20Files/sos_message.dart';
 import 'package:deaf_dump/Screens/learn/Lear_Main_Screen_Display.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../Reserved Files/sms_test.dart';
+import '../../Reserved Files/sms_test2.dart';
 import '../../main.dart';
 import 'Add_contacts.dart';
 import 'Conversion.dart';
+import 'Sos_message_page.dart';
 
 
 
@@ -304,7 +307,7 @@ class _Resources_Main_PageState extends State<Resources_Main_Page> {
             InkWell(
                 onTap: () {
 
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => Sos_Message()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => Sos_message_page()));
 
                 },
                 child: Padding(
@@ -346,7 +349,7 @@ class _Resources_Main_PageState extends State<Resources_Main_Page> {
     // Center(
     // child: TextButton(
     // onPressed: () {
-    //   launch("tel://9526843393");
+    //   Navigator.push(context, MaterialPageRoute(builder: (context)=>sos4()));
     // },
     // child: Text("Call me")),
     // ),
